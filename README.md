@@ -1,4 +1,4 @@
-### ABOUT
+# ABOUT
 
 This repository contains code for a website which is designed to rickroll you.
 
