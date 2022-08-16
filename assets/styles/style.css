@@ -1,0 +1,152 @@
+html {
+	font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url(/assets/fonts/Poppins-SemiBold.ttf);
+	font-weight: 600;
+}
+
+h1,
+p {
+	text-align: center;
+}
+
+.root {
+	min-height: 100vh;
+	max-width: 100vw;
+	background-color: #191919;
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	position: relative;
+}
+
+.frame {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2em;
+}
+
+.frame_heading {
+	font-size: 2rem;
+}
+
+.frame_one {
+	z-index: 4;
+	background-color: #00203fff;
+	color: #adefd1ff;
+	animation: frame_one 800ms linear forwards;
+	animation-delay: 1s;
+}
+.frame_one__heading {
+	animation: frame_one__heading 1000ms ease;
+}
+.frame_two {
+	background-color: #101820ff;
+	color: #fee715ff;
+	z-index: 3;
+	animation: frame_two 800ms linear forwards;
+	animation-delay: 2.8s;
+	transform-origin: bottom;
+}
+.frame_two__heading {
+	animation: frame_two__heading 1000ms ease forwards;
+	animation-delay: 1.5s;
+	opacity: 0;
+}
+.frame_three {
+	background-color: #606060ff;
+	z-index: 1;
+}
+.frame_four {
+	background-color: #333d79ff;
+	color: #faebefff;
+	flex-direction: column;
+	gap: 2em;
+	z-index: 200;
+	opacity: 0;
+	transform: scale(0);
+	transition: transform 500ms ease, opacity 500ms ease;
+}
+
+.video {
+	max-width: 62.5em;
+	width: 100%;
+}
+
+.gif {
+	max-width: 31.25em;
+	width: 85%;
+}
+
+@keyframes frame_one__heading {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	70% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes frame_one {
+	to {
+		transform: translateY(-100vh);
+		opacity: 0;
+	}
+}
+
+@keyframes frame_two__heading {
+	from {
+		transform: rotateZ(720deg) scale(0.2);
+	}
+	to {
+		opacity: 1;
+		transform: rotateZ(0) scale(1);
+	}
+}
+
+@keyframes frame_two {
+	from {
+		opacity: 1;
+	}
+	to {
+		transform: scaleY(0.2);
+		opacity: 0;
+	}
+}
+
+/* @keyframes frame_four {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	30% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	60% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
+} */
